@@ -44,18 +44,20 @@ public class Warehouse {
     public void getProducts(String product){
         String fullText = SingletonWriter.getInstance().getFullList("src/file.cfg");
         String[] sentence = fullText.split("\n");
+        boolean found = false;
         for (int i = 0; i < sentence.length; i++) {
             String text = sentence[i];
             String[] word = text.split(" ");
             int nr = Integer.parseInt(word[0]);
             String productName = word[1];
             if (productName.equals(product)) {
-
                 System.out.println("There is " + nr + " " + product + " in stock");
-            } else {
-                System.out.println("There is none in stock.");
+                found = true;
+                break;
             }
-
+        }
+        if(found != true){
+            System.out.println("Not found.");
         }
 
     }

@@ -12,7 +12,7 @@ public class Main {
         Warehouse warehouse = new Warehouse("Super-Warehouse", "Superway 5B", new ArrayList<Product>());
         //warehouse.createProduct(product1);
         //SingletonWriter.getInstance().read("src/file.cfg");
-        warehouse.getProducts("Robotar");
+        warehouse.getProducts("Robot");
         // warehouse.getLager().add(product2);
         // warehouse.getLager().add(product3);
         // warehouse.getLager().add(product4);
